@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algorithm Visualizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="title">Sorting Algorithm Visualizer</h1>
+      <div class="inner-container">
+        <div class="innerpanel" id="leftcontainer">
+          <div class="input-container">
+            <h2>Enter array elements</h2>
+            <input
+              type="text"
+              id="array-input"
+              placeholder="Enter array elements separated by spaces"
+            />
+          </div>
+
+          <div class="algorithm-selector">
+            <label for="algorithm-select">Algorithm</label>
+            <select id="algorithm-select">
+              <option value="bubble">Bubble Sort</option>
+              <option value="selection">Selection Sort</option>
+              <option value="insertion">Insertion Sort</option>
+              <option value="merge">Merge Sort</option>
+              <option value="quick">Quick Sort</option>
+            </select>
+          </div>
+
+          <div class="speed-selector">
+            <div class="speed-slider-wrap">
+              <input type="range" min="0" max="100" value="50" id="slider" />
+              <span class="speed-label">Speed</span>
+              <span class="speed-value" id="speed-value">50</span>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button class="control-btn" id="random-array-generator-button" type="button">
+              <div class="wrapper">
+                <span class="btn-label">Generate Random Array</span>
+              </div>
+            </button>
+            <button class="control-btn" id="reset-array-button" type="button">
+              <div class="wrapper">
+                <span class="btn-label">Reset Array</span>
+              </div>
+            </button>
+            <button class="control-btn" id="sort-array-button" type="button">
+              <div class="wrapper">
+                <span class="btn-label">Sort</span>
+              </div>
+            </button>
+            <button class="control-btn" id="pause-animation-button" type="button" disabled>
+              <div class="wrapper">
+                <span class="btn-label">Pause</span>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="innerpanel" id="rightcontainer">
+          <div class="upper-rightcontainer" id="viz-container"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
